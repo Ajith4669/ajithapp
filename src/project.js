@@ -17,7 +17,7 @@ const columns = [
             );
         }, 
         colSpan: 1,
-    },
+    }, 
 
     {
         title:'#',
