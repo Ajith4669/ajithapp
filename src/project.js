@@ -15,7 +15,7 @@ const columns = [
             return (
                 <Checkbox></Checkbox>  
             );
-        },
+        }, 
         colSpan: 1,
     },
 
