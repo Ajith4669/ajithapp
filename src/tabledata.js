@@ -32,15 +32,15 @@ const columns = [
     },
     
 {
-    title: 'PM',
+    title: 'PM', 
     dataIndex: 'pm',
     sorter: (a, b) => a.pm - b.pm,
     render: () => {
         return (
-        <Avatar shape="square" size="small" icon={<Image
-            width={20}
+        <Avatar className='avatar' 
+        icon={<Image width={20}
             src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp"></Image>}>    
-            </Avatar>
+        </Avatar>
         );
     },
 },
@@ -232,7 +232,7 @@ const data = [
 },
 ];
 
-const Project = () => {
+const Tabledata = () => {
 
 const [options, setOptions] = useState([]);
 const getPanelValue = (searchText) =>
@@ -243,14 +243,9 @@ const onSelect = (data) => {
 
     return (
     <>
-        <Space
-        style={{
-            marginBottom: 16,
-        }}
-        >
-        <Button size="small" style={{marginLeft:"10px",marginTop:"5px"}}><ProfileFilled/></Button>
-        <Select
-    defaultValue="All"
+        <Space>
+        <Button className='button1'><ProfileFilled/></Button>
+        <Select defaultValue="All"
     options={[
         {
         value: 'Allosaurus web app',
@@ -269,23 +264,16 @@ const onSelect = (data) => {
         label: 'Rugops App',
         },
         {
-            value: 'Erketu',
-            label: 'Erketu',
+        value: 'Erketu',
+        label: 'Erketu',
             },
     ]}
-    style={{
-        width:120,
-        marginTop: 12,
-    }}>
+    className="select">
     </Select>
 
     <AutoComplete
+        className='autocompelte'
         options={options}
-        style={{
-        width: 200,
-        marginTop: 12,
-
-        }}
         onSelect={onSelect}
         onSearch={(text) => setOptions(getPanelValue(text))}
         placeholder="Search"
@@ -293,7 +281,8 @@ const onSelect = (data) => {
 
         <Button className='button'>+ New Project</Button>
         </Space>
-        <Table columns={columns} dataSource={data} pagination={{
+        <Table columns={columns} dataSource={data} 
+        pagination={{
                     showSizeChanger: true,
                     size: "default",
                 }}/>
@@ -302,4 +291,4 @@ const onSelect = (data) => {
 }
 
 
-export default Project;
+export default Tabledata;

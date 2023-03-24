@@ -42,3 +42,22 @@
   margin-top: 5px;
   background-color: #4169E1;
 }
+.button1{
+  size : "small" ;
+  margin-left: 10px;
+  margin-Top: 5px;
+}
+.select{
+    width:120;
+    margin-Top: 12;
+}
+.autocomplete{
+    width: 200;
+    margin-Top: 12;
+
+    }
+.avatar{
+  shape-margin:"square";
+  size:"small"
+}
+
