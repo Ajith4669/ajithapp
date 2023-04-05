@@ -282,10 +282,7 @@ const onSelect = (data) => {
         <Button className='button'>+ New Project</Button>
         </Space>
         <Table columns={columns} dataSource={data} 
-        pagination={{
-                    showSizeChanger: true,
-                    size: "default",
-                }}/>
+        pagination={{showSizeChanger: true,size: "default",}}/>
     </>
     );
 }
